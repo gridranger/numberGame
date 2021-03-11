@@ -15,15 +15,15 @@ class Scene:
 
     @abstractmethod
     def process_input(self, events: List[Event], pressed_keys: Sequence[bool]):
-        pass
+        """overwrite it"""
 
     @abstractmethod
     def update(self):
-        pass
+        """overwrite it"""
 
     @abstractmethod
     def render(self, screen: Surface):
-        pass
+        """overwrite it"""
 
     def switch_to_scene(self, next_scene: Union["Scene", None]):
         self._next_scene = next_scene
