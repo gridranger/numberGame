@@ -8,7 +8,6 @@ from .scene import Scene
 
 
 class TitleScene(Scene):
-    color = (0, 0, 0)
 
     def process_input(self, events: List[Event], pressed_keys: Sequence[bool]):
         if pressed_keys[K_1]:
@@ -22,4 +21,5 @@ class TitleScene(Scene):
         pass
 
     def render(self, screen: Surface):
-        screen.fill(self.color)
+        screen.fill((0, 0, 0))
+        self._draw_floating_menu(screen, (300, 200), (0.5, 7/8))
