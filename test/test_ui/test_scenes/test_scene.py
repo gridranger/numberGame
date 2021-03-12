@@ -1,5 +1,5 @@
 from unittest import TestCase
-from unittest.mock import patch, Mock
+from unittest.mock import Mock
 
 from pygame import Rect
 
@@ -9,9 +9,6 @@ from ui.scenes.scene import Scene
 
 class TestScene(TestCase):
 
-    @patch("ui.scenes.scene.Scene.process_input", set())
-    @patch("ui.scenes.scene.Scene.update", set())
-    @patch("ui.scenes.scene.Scene.render", set())
     def setUp(self):
         self.scene = Scene()
 

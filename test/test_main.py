@@ -35,6 +35,11 @@ class TestMain(TestCase):
         self.main._clean_events([])
         self.main.active_scene.terminate.assert_called()
 
+    def test__clean_events_alt_without_f4(self):
+        main.get_events = Mock(return_value=[Mock(key=K_F4, type=KEYDOWN)])
+        self.main._clean_events({K_LALT: False, K_RALT: False})
+        self.main.active_scene.terminate.assert_not_called()
+
     def test__clean_events_alt_f4(self):
         main.get_events = Mock(return_value=[Mock(key=K_F4, type=KEYDOWN)])
         self.main._clean_events({K_LALT: True, K_RALT: False})

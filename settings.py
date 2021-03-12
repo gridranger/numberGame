@@ -6,3 +6,5 @@ fps = 60
 # theme
 menu_border_color = (235, 235, 235)
 menu_border_thickness = 2
+
+language = "HU"

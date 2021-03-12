@@ -4,10 +4,12 @@ from pygame import K_1, K_2, K_3
 from pygame.event import Event
 from pygame.surface import Surface
 
+# from ..localization import NEW_GAME
 from .scene import Scene
 
 
 class TitleScene(Scene):
+    color = (0, 0, 0)
 
     def process_input(self, events: List[Event], pressed_keys: Sequence[bool]):
         if pressed_keys[K_1]:
@@ -21,5 +23,6 @@ class TitleScene(Scene):
         pass
 
     def render(self, screen: Surface):
-        screen.fill((0, 0, 0))
+        screen.fill(self.color)
         self._draw_floating_menu(screen, (300, 200), (0.5, 7/8))
+        # self._add_text(NEW_GAME)
