@@ -1,17 +1,14 @@
-# from typing import List, Sequence
-#
-# from pygame.event import Event
 from collections import namedtuple
 from typing import Union
 
-from pygame import Surface, Rect
-from pygame.draw import rect
-
-from settings import menu_border_color, menu_border_thickness, screen_height, screen_width
+from settings import screen_height, screen_width
 from ui.node import Node
 
 
-class Menu(Node):
+class Widget(Node):
+    BORDER_COLOR = (235, 235, 235)
+    BORDER_CORNER = 10
+    BORDER_THICKNESS = 2
     xy_tuple = namedtuple("size", ["x", "y"])
 
     def __init__(self, size: tuple[Union[int, float], Union[int, float]],
@@ -64,9 +61,3 @@ class Menu(Node):
         self._calculated_height = 0
         self._calculated_left_padding = 0
         self._calculated_top_padding = 0
-
-    def render(self, screen: Surface):
-        for modifier in [0, 5]:
-            rectangle = Rect(self._x - modifier, self._y - modifier,
-                             self._width + (2 * modifier), self._height + (2 * modifier))
-            rect(screen, menu_border_color, rectangle, menu_border_thickness, 10 + modifier)

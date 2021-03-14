@@ -5,8 +5,8 @@ from pygame.event import Event
 from pygame.surface import Surface
 
 # from ..localization import NEW_GAME
-from .scene import Scene
-from .widgets.menu import Menu
+from ui.scenes.scene import Scene
+from ui.widgets.menu import Menu
 
 
 class TitleScene(Scene):

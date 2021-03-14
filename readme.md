@@ -6,11 +6,11 @@
 
 ## Latest features
 
-* Menu drawing capability improved to a new menu widget supports both absolute and relative positioning
-* Node based structure
-* Self-translating terms
-* Menu drawing capability
-* Hello world state
+* Add widget abstraction layer
+* Improve menu drawing capability to a new menu widget supports both absolute and relative positioning
+* Create node based structure
+* Add self-translating terms
+* Add menu drawing capability
 
 ## Planned features:
 
@@ -23,4 +23,4 @@
 
 ## Feature history
 
-...
+* Reach Hello world state
