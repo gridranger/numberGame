@@ -9,6 +9,7 @@ class Widget(Node):
     BORDER_COLOR = (235, 235, 235)
     BORDER_CORNER = 10
     BORDER_THICKNESS = 2
+    INNER_MARGIN = 5
     xy_tuple = namedtuple("size", ["x", "y"])
 
     def __init__(self, size: tuple[Union[int, float], Union[int, float]],

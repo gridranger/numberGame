@@ -2,15 +2,15 @@
 |---|---:|
 |Unit tests|🟢|
 |Flake8|🟢|
-|Coverage|97%| 
+|Coverage|98%| 
 
 ## Latest features
 
+* Button generation (first approach)
 * Add widget abstraction layer
 * Improve menu drawing capability to a new menu widget supports both absolute and relative positioning
 * Create node based structure
 * Add self-translating terms
-* Add menu drawing capability
 
 ## Planned features:
 
@@ -23,4 +23,5 @@
 
 ## Feature history
 
+* Add menu drawing capability
 * Reach Hello world state

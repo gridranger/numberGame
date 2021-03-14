@@ -6,7 +6,7 @@ from pygame.surface import Surface
 
 # from ..localization import NEW_GAME
 from ui.scenes.scene import Scene
-from ui.widgets.menu import Menu
+from .mainmenu import MainMenu
 
 
 class TitleScene(Scene):
@@ -14,7 +14,7 @@ class TitleScene(Scene):
 
     def __init__(self):
         Scene.__init__(self)
-        self._children["main_menu"] = Menu((0.25, 5 / 18), (0.5, 7 / 8))
+        self._children["main_menu"] = MainMenu((0.25, 5 / 18), (0.5, 7 / 8))
 
     def process_input(self, events: List[Event], pressed_keys: Sequence[bool]):
         if pressed_keys[K_1]:
