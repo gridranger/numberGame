@@ -20,7 +20,7 @@ class Main:
         self.screen = set_mode((screen_width, screen_height))
         set_caption(f"{Main.title} v{Main.version}")
         self.clock = Clock()
-        self.active_scene = TitleScene()
+        self.active_scene = TitleScene(self.screen)
 
     def _clean_events(self, pressed_keys: Sequence[bool]) -> List[Event]:
         result = []
@@ -44,7 +44,7 @@ class Main:
             events = self._clean_events(pressed_keys)
             self.active_scene.process_input(events, pressed_keys)
             self.active_scene.update()
-            self.active_scene.render(self.screen)
+            self.active_scene.render()
             self.active_scene = self.active_scene.next_scene
             flip()
             self.clock.tick(fps)

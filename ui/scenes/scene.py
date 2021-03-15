@@ -1,11 +1,14 @@
 from typing import Union
 
-from ..node import Node
+from pygame.surface import Surface
+
+from ..widgets.widget import Widget
 
 
-class Scene(Node):
-    def __init__(self):
-        Node.__init__(self)
+class Scene(Widget):
+    def __init__(self, surface: Surface):
+        Widget.__init__(self, (surface.get_width(), surface.get_height()), (0,0))
+        self._surface = surface
         self._next_scene = self
 
     @property

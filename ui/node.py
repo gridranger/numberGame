@@ -1,7 +1,6 @@
 from typing import Dict, List, Sequence
 
 from pygame.event import Event
-from pygame.surface import Surface
 
 
 class Node:
@@ -34,6 +33,6 @@ class Node:
         for child_node in self._children.values():
             child_node.update()
 
-    def render(self, screen: Surface):
+    def render(self):
         for child_node in self._children.values():
-            child_node.render(screen)
+            child_node.render()

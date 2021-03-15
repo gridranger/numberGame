@@ -7,6 +7,7 @@ from pygame.event import Event, post
 from pygame.mouse import get_pos
 from pygame.rect import Rect
 from pygame.surface import Surface
+from pygame.sysfont import SysFont
 
 from .widget import Widget
 
@@ -28,6 +29,8 @@ class Button(Widget):
                 if click_is_inside:
                     post(self._event)
 
-    def render(self, screen: Surface):
-        rectangle = Rect(self._x, self._y, self._width, self._height)
-        rect(screen, self.BORDER_COLOR, rectangle, self.BORDER_THICKNESS, self.BORDER_CORNER)
+    def render(self):
+        rectangle = Rect(0, 0, self._width, self._height)
+        rect(self._surface, self.BORDER_COLOR, rectangle, self.BORDER_THICKNESS)
+        text = SysFont("Arial", 16).render(f"{self._label}", True, self.BORDER_COLOR)
+        self._surface.blit(text, text.get_rect())

@@ -17,9 +17,10 @@ class MainMenu(Menu):
     def _add_buttons(self):
         buttons = [(NEW_GAME, NEW_GAME_EVENT), (HIGH_SCORES, HIGH_SCORES_EVENT), (QUIT, QUIT_EVENT)]
         for index, (label, event) in enumerate(buttons):
-            width = self._width - (2 * self.INNER_MARGIN)
-            height = (self._height - ((len(buttons) + 1) * self.INNER_MARGIN)) / len(buttons)
-            x = self._x + self.INNER_MARGIN
-            y = self._y + ((index + 1) * self.INNER_MARGIN) + (index * height)
-            current_button = Button(label, NEW_GAME_EVENT, (width, height), (x, y))
+            vertical_internal_padding = (len(buttons) - 1) * self.INNER_MARGIN
+            width = self._internal_size.x
+            height = (self._internal_size.y - vertical_internal_padding) / len(buttons)
+            x = self.INNER_MARGIN + max(self.BORDER_POSITIONS)
+            y = ((index + 1) * self.INNER_MARGIN) + (index * height) + max(self.BORDER_POSITIONS)
+            current_button = Button(label, NEW_GAME_EVENT, (width, int(height)), (x, y))
             self.add_child(label, current_button)
