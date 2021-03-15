@@ -1,16 +1,16 @@
 | |Status|
 |---|---:|
-|Unit tests|🟢|
+|Unit tests|🔴|
 |Flake8|🟢|
 |Coverage|98%| 
 
 ## Latest features
 
+* Surface based button and widget generation
 * Button generation (first approach)
 * Add widget abstraction layer
 * Improve menu drawing capability to a new menu widget supports both absolute and relative positioning
 * Create node based structure
-* Add self-translating terms
 
 ## Planned features:
 
@@ -23,5 +23,6 @@
 
 ## Feature history
 
+* Add self-translating terms
 * Add menu drawing capability
 * Reach Hello world state

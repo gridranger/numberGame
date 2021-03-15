@@ -6,7 +6,6 @@ from pygame.draw import rect
 from pygame.event import Event, post
 from pygame.mouse import get_pos
 from pygame.rect import Rect
-from pygame.surface import Surface
 from pygame.sysfont import SysFont
 
 from .widget import Widget

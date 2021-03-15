@@ -2,7 +2,6 @@ from collections import namedtuple
 from typing import Union
 
 from pygame.constants import SRCALPHA
-from pygame.display import flip
 from pygame.surface import Surface
 
 from settings import screen_height, screen_width
